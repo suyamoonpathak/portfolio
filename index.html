@@ -168,6 +168,7 @@
             }
 
             .profile-pic-container {
+                order: -1;
                 justify-content: center;
             }
 
@@ -179,6 +180,11 @@
                 flex-direction: column;
                 gap: 5px;
             }
+
+            footer .contact-info-footer .separator {
+                display: none;
+            }
+
         }
     </style>
 </head>
@@ -190,7 +196,6 @@
             name: "Suyamoon Pathak",
             contact: {
                 email: "suyamoonp24@iitk.ac.in",
-                phone: "+91-8128034745",
                 github: "https://github.com/suyamoonpathak",
                 linkedin: "https://www.linkedin.com/in/suyamoonpathak",
             },
@@ -217,8 +222,6 @@
             const footerContactInfo = document.querySelector('footer .contact-info-footer');
             footerContactInfo.innerHTML = `
                 <a href="mailto:${portfolioData.contact.email}" target="_blank" rel="noopener noreferrer">${portfolioData.contact.email}</a>
-                <span class="separator">|</span>
-                <a href="tel:${portfolioData.contact.phone}" target="_blank" rel="noopener noreferrer">${portfolioData.contact.phone}</a>
                 <span class="separator">|</span>
                 <a href="${portfolioData.contact.github}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
                 <span class="separator">|</span>
