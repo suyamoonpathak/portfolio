@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suyamoon Pathak - Projects</title>
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons (only for GitHub/LinkedIn) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic reset and font application */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* White background for extreme minimalism */
+            color: #333; /* Darker text for readability */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px; /* Max width for content, similar to your examples */
+            margin: 0 auto; /* Center the container */
+            padding: 20px 40px; /* More padding on sides for breathing room */
+        }
+
+        /* Header styles - very plain */
+        header {
+            text-align: center;
+            padding: 50px 20px 20px; /* More top padding */
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px; /* Space between name and nav */
+            color: #222;
+            font-weight: 500; /* Lighter weight for main name */
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* Space between nav items */
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-size: 1.1em;
+            padding: 5px 0;
+            transition: color 0.2s ease-in-out;
+        }
+
+        header nav ul li a:hover {
+            color: #000; /* Simple hover effect to black */
+        }
+
+        /* Main content sections */
+        section {
+            padding: 40px 0; /* More vertical padding for sections */
+        }
+
+        section h2 {
+            font-size: 1.8em; /* Slightly smaller for sub-headings */
+            color: #222;
+            margin-bottom: 25px; /* Space below heading */
+            text-align: left; /* Align left as in example */
+            font-weight: 500; /* Lighter weight for section titles */
+        }
+
+        /* Project specific styling */
+        .project-item {
+            display: flex; /* Use flexbox for side-by-side layout */
+            align-items: flex-start; /* Align items to the top */
+            margin-bottom: 30px; /* Space between projects */
+            padding-bottom: 30px; /* Padding for the border */
+            border-bottom: 1px solid #eee; /* Thin grey horizontal strip */
+            gap: 25px; /* Space between image and text */
+        }
+
+        .project-item:last-child {
+            border-bottom: none; /* No border for the last project item */
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .project-image-container {
+            flex-shrink: 0; /* Prevent image from shrinking */
+            width: 200px; /* Increased width for the image container */
+            height: 150px; /* Increased height for the image container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0; /* Light background for placeholder */
+            overflow: hidden; /* Hide overflow if image is larger */
+        }
+
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure image covers the container */
+        }
+
+        .project-details {
+            flex-grow: 1; /* Allow details to take remaining space */
+        }
+
+        .project-item h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #333;
+            margin-top: 0; /* Reset default margin */
+            margin-bottom: 5px;
+        }
+
+        .project-item p {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .project-links a {
+            color: #007bff; /* Standard link color */
+            text-decoration: none;
+            font-size: 0.9em;
+            display: inline-flex;
+            align-items: center;
+            margin-right: 10px; /* Space between links */
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        .project-links .link-separator {
+            color: #555;
+            margin-right: 10px;
+        }
+
+        /* Footer styles - minimal, left-aligned */
+        footer {
+            padding: 30px 40px;
+            text-align: left; /* Align left as in example */
+            color: #555;
+            font-size: 0.9em;
+            border-top: 1px solid #eee; /* Subtle top border */
+            margin-top: 40px;
+        }
+
+        footer .contact-info-footer {
+            margin-bottom: 10px;
+        }
+
+        footer .contact-info-footer a {
+            color: #555;
+            text-decoration: none;
+            margin-right: 15px; /* Space between contact items */
+        }
+
+        footer .contact-info-footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .contact-info-footer .separator {
+            margin-right: 15px;
+            color: #ccc;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            header nav ul {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            section h2 {
+                text-align: center; /* Center section titles on small screens */
+            }
+            .project-item {
+                flex-direction: column; /* Stack image and text vertically on small screens */
+                align-items: center;
+                text-align: center;
+            }
+            .project-image-container {
+                margin-bottom: 15px; /* Add space below image when stacked */
+            }
+            footer {
+                text-align: center;
+            }
+            footer .contact-info-footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+            footer .contact-info-footer a, footer .contact-info-footer .separator {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Data for the portfolio -->
+    <script>
+        const portfolioData = {
+            name: "Suyamoon Pathak",
+            contact: {
+                email: "suyamoonp24@iitk.ac.in",
+                phone: "+91-8128034745",
+                github: "https://github.com/suyamoonpathak",
+                linkedin: "https://www.linkedin.com/in/suyamoonpathak",
+            },
+            about: {
+                text: "Hello! I'm Suyamoon Pathak, a passionate Computer Science and Engineering student with a strong interest in Machine Learning, Natural Language Processing, and Software Development. I'm currently pursuing my M.Tech at IIT Kanpur and have a background in Data Science and Computer Science Engineering from IIT Madras and Pandit Deendayal Energy University, respectively. I love tackling complex problems and building innovative solutions. Welcome to my portfolio!",
+                profilePic: "https://placehold.co/200x200/cccccc/333333?text=Your+Photo", // Placeholder image
+            },
+            experience: [
+                {
+                    title: "Mathematical Modeling Intern",
+                    company: "Delta-V Analytics",
+                    location: "Chennai",
+                    duration: "Jan 2024 - Jun 2024 (6 months)",
+                    responsibilities: [
+                        "Explored Physics Informed Neural Networks (PINNs) and Sparse Regression techniques to enhance anomaly detection and improve prediction accuracy by 15%.",
+                        "Conducted system identification of DC motor data using the Fourier Transform, Kalman Filtering, and Bayesian Approaches to handle irregular sampling and uncertainty in IoT data.",
+                    ],
+                },
+                {
+                    title: "Software Engineering Intern",
+                    company: "OpsHub Inc.",
+                    location: "Ahmedabad",
+                    duration: "May 2023 - Jul 2023 (3 months)",
+                    responsibilities: [
+                        "Engineered integration and migration jobs using the Quartz library, enhancing job reliability by 20%. Implemented features with Angular, Spring, and GraphQL APIs.",
+                    ],
+                },
+            ],
+            projects: [
+                {
+                    title: "Legal Argumentation Mining (Transformers, Graph Neural Networks (GNNs))",
+                    description: "Fine-tuned Transformer-based models to mine Premises and Conclusions from legal documents (F1 0.81), and used Graph Neural Networks (GNNs) to predict the relation between them (F1 0.95).",
+                    github: "https://github.com/suyamoonpathak/ArgumentationMining",
+                    view: "#" // Added view link
+                },
+                {
+                    title: "Text-Based Emotion Detection (Transformers, SemEval 2025 Competition)",
+                    description: "Designed a multi-label emotion classification system using RoBERTa and LLaMA. Improved model performance with entailment-based reformulation, achieving a Jaccard score of 0.64 and a Macro F1-score of 0.77.",
+                    github: "https://github.com/suyamoonpathak/text-based-emotion-detection-semeval-2025-task-11",
+                    view: "#" // Added view link
+                },
+                {
+                    title: "AksharDrishti: Handwritten Text Recognition App (TensorFlow, CRNN)",
+                    description: "Built a CRNN-based handwritten text recognition system with the IAM Words Dataset. Achieved 87.32% character-level accuracy and 64.92% word-level accuracy using advanced image preprocessing and CTC decoding.",
+                    github: "https://github.com/suyamoonpathak/handwritten_text_recognition",
+                    view: "#" // Added view link
+                },
+                {
+                    title: "Enhanced Rescorla-Wagner Model (Mathematical Modeling)",
+                    description: "Enhanced the Rescorla-Wagner model with latent learning, non-linear stimulus interactions, and spontaneous recovery, improving associative strength prediction accuracy by 20% on synthetic datasets.",
+                    github: "https://github.com/suyamoonpathak/enhanced-rescorla-wagner-model",
+                    view: "#" // Added view link
+                },
+                {
+                    title: "StockSage: Stock Price Predictor using LSTM, and Game Theory (Statistics, Game Theory)",
+                    description: "Combined LSTM, Game Theory, and Sentiment Analysis to predict stock prices. Stock data was collected from Yahoo Finance, and News headlines were scraped from NBC using Selenium.",
+                    github: "https://github.com/suyamoonpathak/Game-Theory-Based-Stock-Price-Prediction/",
+                    view: "#" // Added view link
+                },
+                {
+                    title: "Timeless Tunes: Find your beat! (Hadoop, Hive, PySpark, Multi-layer Perceptron)",
+                    description: "Developed a song recommendation system using the 'Million Song Dataset' to train an MLP with PySpark. Recommendations include similar songs from the 90s and user-based personalized playlists.",
+                    github: "https://github.com/suyamoonpathak/timeless-tunes",
+                    view: "#" // Added view link
+                },
+                {
+                    title: "Team-Trak: Employee Management System (NextJS, Firebase)",
+                    description: "Built a production-level employee management system with NextJS. Features include subscription plans, QR code management, Chatbot, GPS tracking, automated timesheets, invoice creation, scheduling, and more.",
+                    github: "https://stage-attendance-management-admin-dashboard.vercel.app/",
+                    view: "https://stage-attendance-management-admin-dashboard.vercel.app/" // Example of actual view link
+                },
+                {
+                    title: "ShowScape: Movie Ticket Booking System (Vue, Flask, SQLite, Redis, Celery, Stripe)",
+                    description: "Developed using Vue and Flask, featuring optimized CRUD operations, Redis caching (40% faster load times), and secure Stripe transactions (15% improvement). Added Celery for automated notifications, a personalized admin dashboard with analytics, and a monthly entertainment report for customers.",
+                    github: "https://github.com/suyamoonpathak/ShowScape---A-Ticket-Booking-Vue-Flask-App",
+                    view: "#" // Added view link
+                },
+                {
+                    title: "Seekh2.0: A GenAI-Powered Learning Management System (Gemini, Flask, PostgreSQL)",
+                    description: "Designed and implemented a GenAI-enhanced learning platform integrated with Gemini for contextual chat support, video summarization, automated grading, and personalized learning features.",
+                    github: "https://github.com/suyamoonpathak/genAI-powered-learning-management-system-seekh2-iitm",
+                    view: "#" // Added view link
+                },
+                {
+                    title: "Process Synchronization and Deadlock Avoidance Algorithms (Vanilla JS)",
+                    description: "Implemented classic synchronization techniques, including Banker’s Algorithm, Binary Counting Semaphores, and Peterson’s Algorithm, providing practical insights into process management.",
+                    github: "https://processsynchronization.netlify.app",
+                    view: "https://processsynchronization.netlify.app" // Example of actual view link
+                },
+                {
+                    title: "Inscribe: A Blogging App (Flask, Jinja2, SQLite)",
+                    description: "Built a feature-rich Flask application for user engagement (upvotes, downvotes, and comments). Integrated CRUD operations, personalized dashboards, follow functionality, and dynamic content rendering using Jinja2 templates.",
+                    github: "https://flask-blog-app-akjq.onrender.com",
+                    view: "https://flask-blog-app-akjq.onrender.com" // Example of actual view link
+                },
+                // Combined Cognitive Science Project
+                {
+                    title: "Cognitive Science Projects (Python, TensorFlow, NumPy)",
+                    description: "This collection of projects explores various aspects of computational cognitive science, including the implementation of Hopfield Networks for associative memory retrieval and MNIST classification. It also covers the design of neural networks and Q-learning agents for learning functions and policies, investigation into Gestalt Principles in CNNs with symmetry and proximity concepts on synthetic datasets, and the development of Categorization Models (GCM, RMC) for human-like size judgments based on weight and height.",
+                    github: "https://github.com/suyamoonpathak/Computational-Cognitive-Science-Projects-CS786-IITK",
+                    view: "#" // Added view link
+                },
+                {
+                    title: "Enhancing Business Dynamics at King Pipes",
+                    description: "Conducted time-series analysis and optimized marketing strategies for King Pipes.",
+                    github: "https://github.com/suyamoonpathak/Enhancing-Business-Dynamics-Through-Data-driven-Solutions-At-King-Pipes",
+                    view: "#" // Added view link
+                },
+                {
+                    title: "Recipe-for-Rating",
+                    description: "Engineered models for recipe ratings, achieving 78.2% accuracy in a Kaggle Competition.",
+                    github: "https://github.com/suyamoonpathak/Recipe-For-Rating-Predict-Food-Ratings-Using-ML",
+                    view: "#" // Added view link
+                }
+            ],
+        };
+
+        // Function to dynamically populate common elements and specific section
+        document.addEventListener('DOMContentLoaded', () => {
+            // Populate Header
+            document.querySelector('header h1').textContent = portfolioData.name;
+            document.querySelector('header nav ul').innerHTML = `
+                <li><a href="index.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            `;
+
+            // Populate Projects Section
+            const projectList = document.getElementById('project-list');
+            if (projectList) { // Ensure the section exists on this page
+                portfolioData.projects.forEach(project => {
+                    const div = document.createElement('div');
+                    div.classList.add('project-item');
+                    let projectContent = `
+                        <div class="project-image-container">
+                            <img src="https://placehold.co/200x150/eeeeee/333333?text=Project+Image" alt="Project Image" class="project-image">
+                        </div>
+                        <div class="project-details">
+                            <h3>${project.title}</h3>
+                            <p>${project.description}</p>
+                            <div class="project-links">
+                                ${project.view ? `<a href="${project.view}" target="_blank" rel="noopener noreferrer">View</a>` : ''}
+                                ${project.view && project.github ? `<span class="link-separator">|</span>` : ''}
+                                ${project.github ? `<a href="${project.github}" target="_blank" rel="noopener noreferrer">Code</a>` : ''}
+                            </div>
+                        </div>
+                    `;
+                    div.innerHTML = projectContent;
+                    projectList.appendChild(div);
+                });
+            }
+
+            // Populate Footer
+            const footerContactInfo = document.querySelector('footer .contact-info-footer');
+            footerContactInfo.innerHTML = `
+                <a href="mailto:${portfolioData.contact.email}" target="_blank" rel="noopener noreferrer">${portfolioData.contact.email}</a>
+                <span class="separator">|</span>
+                <a href="tel:${portfolioData.contact.phone}" target="_blank" rel="noopener noreferrer">${portfolioData.contact.phone}</a>
+                <span class="separator">|</span>
+                <a href="${portfolioData.contact.github}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                <span class="separator">|</span>
+                <a href="${portfolioData.contact.linkedin}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            `;
+        });
+    </script>
+
+    <header>
+        <h1>Suyamoon Pathak</h1>
+        <nav>
+            <ul>
+                <!-- Populated by JavaScript -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="projects">
+            <div id="project-list">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-info-footer">
+            <!-- Content will be populated by JavaScript -->
+        </div>
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> Suyamoon Pathak.</p>
+    </footer>
+</body>
+</html>

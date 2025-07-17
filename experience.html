@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suyamoon Pathak - Experience</title>
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons (only for GitHub/LinkedIn) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic reset and font application */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* White background for extreme minimalism */
+            color: #333; /* Darker text for readability */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px; /* Max width for content, similar to your examples */
+            margin: 0 auto; /* Center the container */
+            padding: 20px 40px; /* More padding on sides for breathing room */
+        }
+
+        /* Header styles - very plain */
+        header {
+            text-align: center;
+            padding: 50px 20px 20px; /* More top padding */
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px; /* Space between name and nav */
+            color: #222;
+            font-weight: 500; /* Lighter weight for main name */
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* Space between nav items */
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-size: 1.1em;
+            padding: 5px 0;
+            transition: color 0.2s ease-in-out;
+        }
+
+        header nav ul li a:hover {
+            color: #000; /* Simple hover effect to black */
+        }
+
+        /* Main content sections */
+        section {
+            padding: 40px 0; /* More vertical padding for sections */
+        }
+
+        section h2 {
+            font-size: 1.8em; /* Slightly smaller for sub-headings */
+            color: #222;
+            margin-bottom: 25px; /* Space below heading */
+            text-align: left; /* Align left as in example */
+            font-weight: 500; /* Lighter weight for section titles */
+        }
+
+        /* General item block styling (Experience, Projects) */
+        .item-block {
+            margin-bottom: 30px; /* More space between blocks */
+        }
+
+        .item-title {
+            font-size: 1.2em; /* Slightly smaller title */
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .item-subtitle {
+            font-style: normal; /* No italics for subtitle */
+            color: #555;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 0.95em; /* Slightly smaller subtitle font */
+        }
+
+        .item-subtitle span {
+            color: #666;
+        }
+
+        .item-description ul {
+            list-style: disc;
+            margin-left: 20px;
+            padding: 0;
+            color: #444;
+            font-size: 0.95em;
+        }
+
+        .item-description ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Footer styles - minimal, left-aligned */
+        footer {
+            padding: 30px 40px;
+            text-align: left; /* Align left as in example */
+            color: #555;
+            font-size: 0.9em;
+            border-top: 1px solid #eee; /* Subtle top border */
+            margin-top: 40px;
+        }
+
+        footer .contact-info-footer {
+            margin-bottom: 10px;
+        }
+
+        footer .contact-info-footer a {
+            color: #555;
+            text-decoration: none;
+            margin-right: 15px; /* Space between contact items */
+        }
+
+        footer .contact-info-footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .contact-info-footer .separator {
+            margin-right: 15px;
+            color: #ccc;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            header nav ul {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            section h2 {
+                text-align: center; /* Center section titles on small screens */
+            }
+            footer {
+                text-align: center;
+            }
+            footer .contact-info-footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
+            footer .contact-info-footer a, footer .contact-info-footer .separator {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Data for the portfolio -->
+    <script>
+        const portfolioData = {
+            name: "Suyamoon Pathak",
+            contact: {
+                email: "suyamoonp24@iitk.ac.in",
+                phone: "+91-8128034745",
+                github: "https://github.com/suyamoonpathak",
+                linkedin: "https://www.linkedin.com/in/suyamoonpathak",
+            },
+            about: {
+                text: "Hello! I'm Suyamoon Pathak, a passionate Computer Science and Engineering student with a strong interest in Machine Learning, Natural Language Processing, and Software Development. I'm currently pursuing my M.Tech at IIT Kanpur and have a background in Data Science and Computer Science Engineering from IIT Madras and Pandit Deendayal Energy University, respectively. I love tackling complex problems and building innovative solutions. Welcome to my portfolio!",
+                profilePic: "https://placehold.co/200x200/cccccc/333333?text=Your+Photo", // Placeholder image
+            },
+            experience: [
+                {
+                    title: "Mathematical Modeling Intern",
+                    company: "Delta-V Analytics",
+                    location: "Chennai",
+                    duration: "Jan 2024 - Jun 2024 (6 months)",
+                    responsibilities: [
+                        "Explored Physics Informed Neural Networks (PINNs) and Sparse Regression techniques to enhance anomaly detection and improve prediction accuracy by 15%.",
+                        "Conducted system identification of DC motor data using the Fourier Transform, Kalman Filtering, and Bayesian Approaches to handle irregular sampling and uncertainty in IoT data.",
+                    ],
+                },
+                {
+                    title: "Software Engineering Intern",
+                    company: "OpsHub Inc.",
+                    location: "Ahmedabad",
+                    duration: "May 2023 - Jul 2023 (3 months)",
+                    responsibilities: [
+                        "Engineered integration and migration jobs using the Quartz library, enhancing job reliability by 20%. Implemented features with Angular, Spring, and GraphQL APIs.",
+                    ],
+                },
+            ],
+            projects: [
+                {
+                    title: "Legal Argumentation Mining (Transformers, Graph Neural Networks (GNNs))",
+                    description: "Fine-tuned Transformer-based models to mine Premises and Conclusions from legal documents (F1 0.81), and used Graph Neural Networks (GNNs) to predict the relation between them (F1 0.95).",
+                    github: "https://github.com/suyamoonpathak/ArgumentationMining",
+                },
+                {
+                    title: "Text-Based Emotion Detection (Transformers, SemEval 2025 Competition)",
+                    description: "Designed a multi-label emotion classification system using RoBERTa and LLaMA. Improved model performance with entailment-based reformulation, achieving a Jaccard score of 0.64 and a Macro F1-score of 0.77.",
+                    github: "https://github.com/suyamoonpathak/text-based-emotion-detection-semeval-2025-task-11",
+                },
+                {
+                    title: "AksharDrishti: Handwritten Text Recognition App (TensorFlow, CRNN)",
+                    description: "Built a CRNN-based handwritten text recognition system with the IAM Words Dataset. Achieved 87.32% character-level accuracy and 64.92% word-level accuracy using advanced image preprocessing and CTC decoding.",
+                    github: "https://github.com/suyamoonpathak/handwritten_text_recognition",
+                },
+                {
+                    title: "Enhanced Rescorla-Wagner Model (Mathematical Modeling)",
+                    description: "Enhanced the Rescorla-Wagner model with latent learning, non-linear stimulus interactions, and spontaneous recovery, improving associative strength prediction accuracy by 20% on synthetic datasets.",
+                    github: "https://github.com/suyamoonpathak/enhanced-rescorla-wagner-model",
+                },
+                {
+                    title: "StockSage: Stock Price Predictor using LSTM, and Game Theory (Statistics, Game Theory)",
+                    description: "Combined LSTM, Game Theory, and Sentiment Analysis to predict stock prices. Stock data was collected from Yahoo Finance, and News headlines were scraped from NBC using Selenium.",
+                    github: "https://github.com/suyamoonpathak/Game-Theory-Based-Stock-Price-Prediction/",
+                },
+                {
+                    title: "Timeless Tunes: Find your beat! (Hadoop, Hive, PySpark, Multi-layer Perceptron)",
+                    description: "Developed a song recommendation system using the 'Million Song Dataset' to train an MLP with PySpark. Recommendations include similar songs from the 90s and user-based personalized playlists.",
+                    github: "https://github.com/suyamoonpathak/timeless-tunes",
+                },
+                {
+                    title: "Cognitive Science Projects (Python, TensorFlow, NumPy)",
+                    description: "Implemented Hopfield Networks for associative memory retrieval and MNIST classification. Designed neural networks and Q-learning agents for learning functions and policies. Investigated Gestalt Principles in CNNs with symmetry and proximity concepts on synthetic datasets. Built Categorization Models (GCM, RMC) for human-like size judgments based on weight and height.",
+                    github: "https://github.com/suyamoonpathak/Computational-Cognitive-Science-Projects-CS786-IITK",
+                },
+                {
+                    title: "Software Engineering Projects",
+                    subProjects: [
+                        {
+                            name: "Team-Trak: Employee management system developed using NextJS.",
+                            link: "https://stage-attendance-management-admin-dashboard.vercel.app/",
+                        },
+                        {
+                            name: "Seekh2.0: GenAI-Powered Learning Management System with Chat, and Video summarization using Gemini API.",
+                            link: "https://github.com/suyamoonpathak/genAI-powered-learning-management-system-seekh2-iitm",
+                        },
+                        {
+                            name: "ShowScape: Optimized movie ticket booking system developed using Vue and Flask.",
+                            link: "https://github.com/suyamoonpathak/ShowScape---A-Ticket-Management-Vue-Flask-App",
+                        },
+                        {
+                            name: "Inscribe: A Flask Blog App",
+                            link: "https://github.com/suyamoonpathak/Flaskerr---A-blog-app",
+                        },
+                        {
+                            name: "Sahachakra: An app to learn Process Synchronization Algorithms",
+                            link: "https://github.com/suyamoonpathak/Process-Synchronization-and-Deadlock-Avoidance",
+                        },
+                    ],
+                },
+            ],
+        };
+
+        // Function to dynamically populate common elements and specific section
+        document.addEventListener('DOMContentLoaded', () => {
+            // Populate Header
+            document.querySelector('header h1').textContent = portfolioData.name;
+            document.querySelector('header nav ul').innerHTML = `
+                <li><a href="index.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            `;
+
+            // Populate Experience Section
+            const experienceList = document.getElementById('experience-list');
+            if (experienceList) { // Ensure the section exists on this page
+                portfolioData.experience.forEach(exp => {
+                    const div = document.createElement('div');
+                    div.classList.add('item-block');
+                    const responsibilitiesHtml = exp.responsibilities.map(res => `<li>${res}</li>`).join('');
+                    div.innerHTML = `
+                        <div class="item-title">${exp.title} at ${exp.company}</div>
+                        <div class="item-subtitle">${exp.location} <span class="right-align">${exp.duration}</span></div>
+                        <div class="item-description"><ul>${responsibilitiesHtml}</ul></div>
+                    `;
+                    experienceList.appendChild(div);
+                });
+            }
+
+            // Populate Footer
+            const footerContactInfo = document.querySelector('footer .contact-info-footer');
+            footerContactInfo.innerHTML = `
+                <a href="mailto:${portfolioData.contact.email}" target="_blank" rel="noopener noreferrer">${portfolioData.contact.email}</a>
+                <span class="separator">|</span>
+                <a href="tel:${portfolioData.contact.phone}" target="_blank" rel="noopener noreferrer">${portfolioData.contact.phone}</a>
+                <span class="separator">|</span>
+                <a href="${portfolioData.contact.github}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                <span class="separator">|</span>
+                <a href="${portfolioData.contact.linkedin}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            `;
+        });
+    </script>
+
+    <header>
+        <h1>Suyamoon Pathak</h1>
+        <nav>
+            <ul>
+                <!-- Populated by JavaScript -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="experience">
+            <div id="experience-list">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-info-footer">
+            <!-- Content will be populated by JavaScript -->
+        </div>
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> Suyamoon Pathak.</p>
+    </footer>
+</body>
+</html>
